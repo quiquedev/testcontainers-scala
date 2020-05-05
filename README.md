@@ -494,7 +494,7 @@ If you want to use a single container for each test in your suite just use code 
 You have the option to override `afterContainersStart` and `beforeContainersStop` methods.
 
 ##### Example with single container
-```
+```scala
 class MySpec extends FlatSpec with TestContainerForAll {
 
   override val containerDef: ContainerDef =
@@ -523,7 +523,7 @@ class MySpec extends FlatSpec with TestContainerForAll {
 ```
 
 #### Example with multiple containers
-```
+```scala
 class MySpec extends FlatSpec with TestContainersForAll {
 
   override type Containers = MySQLContainer and PostgreSQLContainer
