@@ -516,8 +516,9 @@ class MySpec extends FlatSpec with TestContainerForAll {
     }
   }
 
- "test" should "work" in withContainers { case postgreSQLContainer: PostgreSQLContainer =>
-    succeed
+ it should "work" in withContainers { 
+   case postgreSQLContainer: PostgreSQLContainer =>
+     assert(postgreSQLContainer.jdbcUrl.nonEmpty) 
   }
 }
 ```
@@ -551,7 +552,7 @@ class MySpec extends FlatSpec with TestContainersForAll {
     }
   }
 
-  it should "test" in withContainers {
+  it should "work" in withContainers {
     case mysqlContainer and pgContainer =>
       assert(mysqlContainer.jdbcUrl.nonEmpty && pgContainer.jdbcUrl.nonEmpty)
   }
