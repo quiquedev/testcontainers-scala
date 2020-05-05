@@ -523,7 +523,7 @@ class MySpec extends FlatSpec with TestContainerForAll {
 }
 ```
 
-#### Example with multiple containers
+##### Example with multiple containers
 ```scala
 class MySpec extends FlatSpec with TestContainersForAll {
 
