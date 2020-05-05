@@ -517,8 +517,8 @@ class MySpec extends FlatSpec with TestContainerForAll {
   }
 
  it should "work" in withContainers { 
-   case postgreSQLContainer: PostgreSQLContainer =>
-     assert(postgreSQLContainer.jdbcUrl.nonEmpty) 
+   case pgContainer: PostgreSQLContainer =>
+     assert(pgContainer.jdbcUrl.nonEmpty) 
   }
 }
 ```
