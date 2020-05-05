@@ -540,7 +540,7 @@ class MySpec extends FlatSpec with TestContainersForAll {
     super.afterContainersStart(containers)
 
     containers match {
-      case mySqlContainer and postgreSQLContainer => println("your logic here")
+      case mySqlContainer and pgContainer => println("your logic here")
     }
   }
 
@@ -548,7 +548,7 @@ class MySpec extends FlatSpec with TestContainersForAll {
     super.beforeContainersStop(containers)
 
     containers match {
-      case mySqlContainer and postgreSQLContainer => println("your logic here")
+      case mySqlContainer and pgContainer => println("your logic here")
     }
   }
 
